@@ -2,7 +2,7 @@
 // Donation Function for Noakhali
 document.getElementById('noakhali-donation-btn').addEventListener('click', function(){
     console.log('btn clicked');
-    
+
     // Get available balance
     const availableBalance = getTextValueById('available-balance')
     console.log('Available balance is : ', availableBalance);
@@ -14,6 +14,22 @@ document.getElementById('noakhali-donation-btn').addEventListener('click', funct
     // Get input for Noakhali
     const donatedBalanceNoakhali = getInputValueById('noakhali-donated-balance');
     console.log('Donation : ', donatedBalanceNoakhali);
+    
+    // Check availability of balance
+    if(availableBalance < donatedBalanceNoakhali)
+        {
+            // Using Toastify to show an error
+            Toastify({
+                text: "Sorry! You have not enough balance to donate.",
+                duration: 3000, // 3 seconds
+                close: true,
+                gravity: "top", // top or bottom
+                position: "right", // left, center, right
+                backgroundColor: "#FF4F5A", // Red background for error
+                stopOnFocus: true // Stops toast on hover
+            }).showToast();
+            return;
+        }
 
     // Add donated balance with total balance
     const newBalance = totalBalanceOfNoakhali + donatedBalanceNoakhali;
