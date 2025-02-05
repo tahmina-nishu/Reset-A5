@@ -59,4 +59,7 @@ document.getElementById('noakhali-donation-btn').addEventListener('click', funct
 
     // Uptade available balance
     document.getElementById('available-balance').innerText = updatedAvailableBalance;
+
+    // Show success modal
+    showSuccessModal();
 })

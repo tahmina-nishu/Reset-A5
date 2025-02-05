@@ -13,3 +13,15 @@ function getTextValueById(id)
     const innerTextNumber = parseFloat(innerText)
     return innerTextNumber;
 }
+
+// Function to show success modal
+function showSuccessModal() {
+    const modal = document.getElementById('success-modal');
+    modal.classList.remove('hidden');
+}
+
+// Close modal event listener
+document.getElementById('close-modal-btn').addEventListener('click', function() {
+    const modal = document.getElementById('success-modal');
+    modal.classList.add('hidden');
+});

@@ -137,9 +137,10 @@
             </div>
          </div>
         </div>
+          
 
                 <!-- History Section  -->
-        <div id="history-section" class="space-y-3">
+        <div id="history-section" class="space-y-3 hidden">
             <div class="border-2 rounded-lg px-5 py-3">
                 <h3 class="font-bold">Donated</h3>
                 <p>Date</p>
@@ -147,6 +148,19 @@
         </div>
     </main>
 
+    <!-- Successfull modal  -->
+    <div id="success-modal" class="hidden fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 ">
+        <div class="bg-white p-6 rounded-lg w-[500px] flex flex-col justify-center items-center gap-4">
+          <h3 class="text-3xl font-bold">Congrates!</h3>
+          <img class="w-16" src="https://img.icons8.com/color/48/heart-balloon--v2.png" alt="heart-balloon--v2"/>
+          
+          <p>You have donated for humankind</p>
+          <h3 class="text-lg font-bold">Successfully</h3>
+          <div class="flex justify-center mt-6">
+            <button id="close-modal-btn" class="btn bg-[#cccccc4d] text-white text-base font-medium px-12 py-2 rounded">Close Confirmation</button>
+          </div>
+        </div>
+      </div>
     <!-- ------------ Footer Part --------------  -->
     <footer class="bg-[#F9F7F3] h-32 mt-5">
 
