@@ -8,15 +8,30 @@ document.getElementById('noakhali-donation-btn').addEventListener('click', funct
     console.log('Available balance is : ', availableBalance);
     
     // Get Total Balance of Noakhali
-    const totalBalanceOfNoakhali = getTextValueById('noakhali-total-balance');
-    console.log('Total balance of Noakhali is : ', totalBalanceOfNoakhali);
+    const totalBalance = getTextValueById('noakhali-total-balance');
+    console.log('Total balance of Noakhali is : ', totalBalance);
 
     // Get input for Noakhali
-    const donatedBalanceNoakhali = getInputValueById('noakhali-donated-balance');
-    console.log('Donation : ', donatedBalanceNoakhali);
+    const donatedBalance = getInputValueById('noakhali-donated-balance');
+    console.log('Donation : ', donatedBalance);
+
+    // Check if the amount is a number
+    if(isNaN(donatedBalance)){
+        // Using Toastify to show an error
+        Toastify({
+            text: "Please enter a valid number",
+            duration: 3000, // 3 seconds
+            close: true,
+            gravity: "top", // top or bottom
+            position: "right", // left, center, right
+            backgroundColor: "#FF4F5A", // Red background for error
+            stopOnFocus: true // Stops toast on hover
+        }).showToast();
+        return;
+    }
     
     // Check availability of balance
-    if(availableBalance < donatedBalanceNoakhali)
+    if(availableBalance < donatedBalance)
         {
             // Using Toastify to show an error
             Toastify({
@@ -32,11 +47,11 @@ document.getElementById('noakhali-donation-btn').addEventListener('click', funct
         }
 
     // Add donated balance with total balance
-    const newBalance = totalBalanceOfNoakhali + donatedBalanceNoakhali;
+    const newBalance = totalBalance + donatedBalance;
     console.log('New total balance : ', newBalance);
 
     // Subtract donated balance from available balance
-    const updatedAvailableBalance = availableBalance - donatedBalanceNoakhali;
+    const updatedAvailableBalance = availableBalance - donatedBalance;
     console.log('Updated available balance : ',updatedAvailableBalance);
 
     // Uptade total balance
