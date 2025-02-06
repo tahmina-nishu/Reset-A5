@@ -62,4 +62,21 @@ document.getElementById('noakhali-donation-btn').addEventListener('click', funct
 
     // Show success modal
     showSuccessModal();
-})
+
+    // Add to history
+    const div = document.createElement('div');
+    div.classList.add('border-2', 'rounded-lg', 'px-5', 'py-3');
+
+    // Get the current date and time in Bangladesh timezone
+    const bangladeshTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" });
+    const formattedDate = new Date(bangladeshTime).toString();
+
+    // Add the innerHTML with the formatted date
+    div.innerHTML = `
+        <h4 class="font-semibold">${donatedBalance} Taka is Donated ${document.getElementById('donated-for-noakhali').innerText}</h4>
+        <p>Date: ${formattedDate}</p>
+    `;
+
+    document.getElementById('history-section').appendChild(div);
+
+}) 
