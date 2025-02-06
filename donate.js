@@ -1,82 +1,10 @@
+// manageDonation(clickedBtn, totalbalance, donatedbalance, donatedFor)
 
-// Donation Function for Noakhali
-document.getElementById('noakhali-donation-btn').addEventListener('click', function(){
-    console.log('btn clicked');
+// Donation for Noakhali
+manageDonation('noakhali-donation-btn', 'noakhali-total-balance', 'noakhali-donated-balance', 'donated-for-noakhali');
 
-    // Get available balance
-    const availableBalance = getTextValueById('available-balance')
-    console.log('Available balance is : ', availableBalance);
-    
-    // Get Total Balance of Noakhali
-    const totalBalance = getTextValueById('noakhali-total-balance');
-    console.log('Total balance of Noakhali is : ', totalBalance);
+// Donation for Feni
+manageDonation('feni-donation-btn', 'feni-total-balance', 'feni-donated-balance', 'donated-for-feni');
 
-    // Get input for Noakhali
-    const donatedBalance = getInputValueById('noakhali-donated-balance');
-    console.log('Donation : ', donatedBalance);
-
-    // Check if the amount is a number
-    if(isNaN(donatedBalance)){
-        // Using Toastify to show an error
-        Toastify({
-            text: "Please enter a valid number",
-            duration: 3000, // 3 seconds
-            close: true,
-            gravity: "top", // top or bottom
-            position: "right", // left, center, right
-            backgroundColor: "#FF4F5A", // Red background for error
-            stopOnFocus: true // Stops toast on hover
-        }).showToast();
-        return;
-    }
-    
-    // Check availability of balance
-    if(availableBalance < donatedBalance)
-        {
-            // Using Toastify to show an error
-            Toastify({
-                text: "Sorry! You have not enough balance to donate.",
-                duration: 3000, // 3 seconds
-                close: true,
-                gravity: "top", // top or bottom
-                position: "right", // left, center, right
-                backgroundColor: "#FF4F5A", // Red background for error
-                stopOnFocus: true // Stops toast on hover
-            }).showToast();
-            return;
-        }
-
-    // Add donated balance with total balance
-    const newBalance = totalBalance + donatedBalance;
-    console.log('New total balance : ', newBalance);
-
-    // Subtract donated balance from available balance
-    const updatedAvailableBalance = availableBalance - donatedBalance;
-    console.log('Updated available balance : ',updatedAvailableBalance);
-
-    // Uptade total balance
-    document.getElementById('noakhali-total-balance').innerText = newBalance;
-
-    // Uptade available balance
-    document.getElementById('available-balance').innerText = updatedAvailableBalance;
-
-    // Show success modal
-    showSuccessModal();
-
-    // Add to history
-    const div = document.createElement('div');
-    div.classList.add('border-2', 'rounded-lg', 'px-5', 'py-3');
-
-    // Get the current date and time in Bangladesh timezone
-    const bangladeshTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" });
-    const formattedDate = new Date(bangladeshTime).toString();
-
-    // Add the innerHTML with the formatted date
-    div.innerHTML = `
-        <h4 class="font-semibold">${donatedBalance} Taka is Donated ${document.getElementById('donated-for-noakhali').innerText}</h4>
-        <p>Date: ${formattedDate}</p>
-    `;
-
-    document.getElementById('history-section').appendChild(div);
-
-}) 
+// Donation for Quota Movement
+manageDonation('quota-donation-btn', 'quota-total-balance', 'quota-donated-balance', 'donated-for-quota');

@@ -1,11 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+
+   <!-- Favicon link  -->
+  <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.xa_rr7FLlBM_iSkP6HzHlQHaGq?w=194&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" type="image/x-icon">
+
+  <!-- DaisyUi link  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  
+        <!-- styles  -->
+        <style>
+            h4{
+                font-size: x-large !important;
+                font-weight: bold !important;
+            }
+            button {
+                color: #111111 !important;
+                font-weight: 600 !important;
+                font-size: x-large !important;
+                border-radius: 8px;
+                background: #B4F461 !important;
+            }
+         </style>
 </head>
 <body>
-    <h1>This is the blog page</h1>
+    <!-- Header section  -->
+     <header class="sticky top-0 z-10 bg-[#FFFFFFF2] pb-3">
+        <nav class="bg-[#F9F7F3] flex justify-between items-center px-10 py-12">
+            <!-- Blog Button -->
+            <a href="index.html">
+                <button class="px-10 py-3"> Home </button>
+            </a>
+            
+            <div class="flex gap-2 items-center">
+                <img class="h-9" src="assets/logo.png" alt="">
+                <h4>Donate Bangladesh</h4>
+            </div>
+            <div class="flex gap-2 items-center">
+                <img src="assets/coin.png" alt="">
+                <!-- -----Balance---- -->
+                <p class="text-xl"><span id="available-balance">5500</span> BDT</p>
+            </div>
+        </nav>
+     </header>
+    
+     <!-- Main section  -->
+      <main class="mx-28">
+        <div class="px-5 mt-10 space-y-12">
+            <div class="flex gap-3">
+                <h3 class="text-5xl font-semibold">Important FAQ </h3>
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/ask-question--v1.png" alt="ask-question--v1"/>
+            </div>
+            
+            <div class="space-y-3">
+                <!-- Question - 1  -->
+            <div class="collapse collapse-arrow border border-blue-100">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-2xl font-medium">
+                  What is the Document Object Model (DOM)?
+                </div>
+                <div class="collapse-content">
+                  <p>
+                    The Document Object Model (DOM) is a way for web pages to be represented in a structure that JavaScript can interact with. It turns the HTML of a page into a tree-like format, where each part of the page (like text, images, or buttons) is an object. <br>
+
+                    Using the DOM, you can change the content, style, or structure of a web page dynamically. For example, you can change the text of a heading or make a button appear or disappear, all while the page is open in a browser.
+                  </p>
+                </div>
+              </div>
+  
+              <!-- Question - 2  -->
+              <div class="collapse collapse-arrow border border-blue-100">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-2xl font-medium">
+                  How do you select an element from the DOM?
+                </div>
+                <div class="collapse-content">
+                  <p>
+                    To select an element from the DOM, you typically use JavaScript methods that help you identify and target specific elements on the page. Here are some common ways to select an element: <br> <br>
+
+                    getElementById(): Selects an element by its id attribute. <br>
+                    getElementsByClassName(): Selects elements by their class name. <br>
+                    getElementsByTagName(); Selects elements by their tag name (like div, p, h1, etc.). <br>
+                    querySelector(): Selects the first element that matches a CSS selector. <br>
+                    querySelectorAll(): Selects all elements that match a CSS selector. 
+                  </p>
+                </div>
+              </div>
+  
+              <!-- Question - 3  -->
+              <div class="collapse collapse-arrow border border-blue-100">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-2xl font-medium">
+                  What is event delegation in the context of the DOM and why is it useful?
+                </div>
+                <div class="collapse-content">
+                  <p>
+                    Event delegation is a technique in JavaScript where you attach a single event listener to a parent element instead of adding event listeners to individual child elements. When an event occurs on a child element, the event "bubbles up" to the parent, and the parent can handle the event for all its children. <br> <br>
+
+                    It is useful for - <br>
+                        Efficiency: Instead of attaching many event listeners to each child element, you only need one listener on the parent. <br>
+                        Dynamic content: If new child elements are added later, the parent will automatically handle events for them too, without needing extra code.
+                  </p>
+                </div>
+              </div>
+  
+              <!-- Question - 4  -->
+              <div class="collapse collapse-arrow border border-blue-100">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-2xl font-medium">
+                  How do you manipulate an element's attributes and styles using the DOM?
+                </div>
+                <div class="collapse-content">
+                  <p>
+                    You can manipulate an element's attributes and styles using the DOM by accessing the element and then changing its properties.
+                    <br> <br>
+
+                    1. Manipulating Attributes: <br>
+                        (a) To change an element's attribute (like id, src, href, etc.), you use the setAttribute() method. <br>
+                        (b) You can also get an attribute value using getAttribute() <br> <br>
+                    2. Manipulating Styles: <br>
+                        (a) To change an element's style, you can directly modify the style property of the element. <br> <br>
+                        For example: <br>
+                            let div = document.getElementById('myDiv'); <br>
+                            div.style.backgroundColor = 'blue'; <br>
+                            div.style.fontSize = '20px';  // Change font size
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </main>
+
+    <!-- ------------ Footer section --------------  -->
+    <footer class="bg-[#F9F7F3] h-44 mt-5">
+
+    </footer>
 </body>
 </html>

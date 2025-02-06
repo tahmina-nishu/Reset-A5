@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Donate For Humankind</title>
 
   <!-- Favicon link  -->
-  <link rel="shortcut icon" href="payoo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.xa_rr7FLlBM_iSkP6HzHlQHaGq?w=194&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" type="image/x-icon">
 
   <!-- DaisyUi link  -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -71,7 +71,7 @@
                 <!-- Donation Section  -->
         <div id="donation-section" class=" space-y-5">
             <!-- ----------------------------------- Card - 1 -------------------------------- -->
-         <div class="grid grid-cols-5 items-center  border-2 py-4 px-8 rounded-lg">
+         <div class="grid grid-cols-5 items-center  border-2 py-4 px-8 rounded-lg gap-3 shadow-lg">
             <!-- image -->
             <img class="col-span-2" src="assets/noakhali.png" alt="">
             <div class="col-span-3 space-y-5">
@@ -93,14 +93,14 @@
             </div>
          </div>
         <!-- ----------------------------------- Card - 2 -------------------------------- -->
-         <div class="grid grid-cols-5 items-center  border-2 py-4 px-8 rounded-lg">
+         <div class="grid grid-cols-5 items-center  border-2 py-4 px-8 rounded-lg gap-3 shadow-lg">
             <!-- image -->
             <img class="col-span-2" src="assets/feni.png" alt="">
             <div class="col-span-3 space-y-5">
                 <div class="flex gap-2 items-center">
                     <img src="assets/coin.png" alt="">
                     <!-- Total donation  -->
-                    <p class="text-xl"><span>600</span> BDT</p>
+                    <p class="text-xl"><span id="feni-total-balance">600</span> BDT</p>
                 </div>
 
                 <h4>Donate <span id="donated-for-feni">for Flood Relief in Feni,Bangladesh</span></h4>
@@ -108,21 +108,21 @@
                 <p> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
 
                 <!-- Donated Amount  -->
-                <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " /> <br>
+                <input id="feni-donated-balance" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " /> <br>
                 
                 <!-- Donate Button  -->
-                <button class="w-full py-2">Donate Now</button>
+                <button id="feni-donation-btn" class="w-full py-2">Donate Now</button>
             </div>
          </div>
         <!-- ----------------------------------- Card - 3 -------------------------------- -->
-         <div class="grid grid-cols-5 items-center  border-2 py-4 px-8 rounded-lg">
+         <div class="grid grid-cols-5 items-center  border-2 py-4 px-8 rounded-lg gap-3 shadow-lg">
             <!-- image -->
             <img class="col-span-2" src="assets/quota-protest.png" alt="">
             <div class="col-span-3 space-y-5">
                 <div class="flex gap-2 items-center">
                     <img src="assets/coin.png" alt="">
                     <!-- Total donation  -->
-                    <p class="text-xl"><span>2400</span> BDT</p>
+                    <p class="text-xl"><span id="quota-total-balance">2400</span> BDT</p>
                 </div>
 
                 <h4>Aid <span id="donated-for-quota">for Injured in the Quota Movement</span></h4>
@@ -130,10 +130,10 @@
                 <p> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
 
                 <!-- Donated Amount  -->
-                <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " /> <br>
+                <input id="quota-donated-balance" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " /> <br>
                 
                 <!-- Donate Button  -->
-                <button class="w-full py-2">Donate Now</button>
+                <button id="quota-donation-btn" class="w-full py-2">Donate Now</button>
             </div>
          </div>
         </div>
