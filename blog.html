@@ -31,15 +31,17 @@
 <body>
     <!-- Header section  -->
      <header class="sticky top-0 z-10 bg-[#FFFFFFF2] pb-3">
-        <nav class="bg-[#F9F7F3] flex justify-between items-center px-10 py-12">
-            <!-- Blog Button -->
-            <a href="index.html">
-                <button class="px-10 py-3"> Home </button>
-            </a>
-            
-            <div class="flex gap-2 items-center">
-                <img class="h-9" src="assets/logo.png" alt="">
-                <h4>Donate Bangladesh</h4>
+        <nav class="bg-[#F9F7F3] flex flex-col lg:flex-row gap-3 lg:justify-between items-center px-5 py-4 lg:px-10 lg:py-12">
+            <div class="flex justify-between items-center gap-16 lg:gap-96">
+                <!-- Home Button -->
+                <a href="index.html">
+                    <button class="px-6 py-2 lg:px-10 lg:py-3"> Home </button>
+                </a>
+                
+                <div class="flex gap-2 items-center">
+                    <img class="h-9" src="assets/logo.png" alt="">
+                    <h4>Donate Bangladesh</h4>
+                </div>
             </div>
             <div class="flex gap-2 items-center">
                 <img src="assets/coin.png" alt="">
@@ -50,10 +52,10 @@
      </header>
     
      <!-- Main section  -->
-      <main class="mx-28">
-        <div class="px-5 mt-10 space-y-12">
+      <main class="mx-3 lg:mx-28">
+        <div class="px-3 lg:px-5 mt-5 lg:mt-10 space-y-5 lg:space-y-12">
             <div class="flex gap-3">
-                <h3 class="text-5xl font-semibold">Important FAQ </h3>
+                <h3 class="text-4xl lg:text-5xl font-semibold">Important FAQ </h3>
                 <img width="50" height="50" src="https://img.icons8.com/ios/50/ask-question--v1.png" alt="ask-question--v1"/>
             </div>
             
@@ -61,7 +63,7 @@
                 <!-- Question - 1  -->
             <div class="collapse collapse-arrow border border-blue-100">
                 <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-2xl font-medium">
+                <div class="collapse-title text-xl lg:text-2xl font-medium">
                   What is the Document Object Model (DOM)?
                 </div>
                 <div class="collapse-content">
@@ -76,7 +78,7 @@
               <!-- Question - 2  -->
               <div class="collapse collapse-arrow border border-blue-100">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-2xl font-medium">
+                <div class="collapse-title text-xl lg:text-2xl font-medium">
                   How do you select an element from the DOM?
                 </div>
                 <div class="collapse-content">
@@ -95,7 +97,7 @@
               <!-- Question - 3  -->
               <div class="collapse collapse-arrow border border-blue-100">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-2xl font-medium">
+                <div class="collapse-title text-xl lg:text-2xl font-medium">
                   What is event delegation in the context of the DOM and why is it useful?
                 </div>
                 <div class="collapse-content">
@@ -112,7 +114,7 @@
               <!-- Question - 4  -->
               <div class="collapse collapse-arrow border border-blue-100">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-2xl font-medium">
+                <div class="collapse-title text-xl lg:text-2xl font-medium">
                   How do you manipulate an element's attributes and styles using the DOM?
                 </div>
                 <div class="collapse-content">
